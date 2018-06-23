@@ -1,12 +1,24 @@
 .footer{
-	background-color: #490549;
+	background-color: deeppink;
 	width: 100%;
 	position: relative;
+	margin: 0px;
 }
 
 .footer p{
 	color: white;
 	text-align: center;
-	padding: 10px 0;
+	padding: 5px 0;
 	font-size: 15px;
+	margin: 0px;
+	font-family: 'Audiowide', cursive;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: darkslateblue;
 }

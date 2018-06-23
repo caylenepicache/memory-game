@@ -4,7 +4,7 @@ import "./Footer.css";
 
 const Footer = () => (
 	<header className = "footer">
-		<p>GAME BY CAYLENE</p>
+		<p>BY <a href="https://caylenejsp.herokuapp.com/">CAYLENE</a></p>
 	</header>
 );
 

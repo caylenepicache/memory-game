@@ -14,6 +14,8 @@ h1{
 	margin: 0px;
 	font-family: 'Old Standard TT', serif;
 	background-color: transparent;
+	letter-spacing: 18px;
+	text-shadow: 3px 2px #777;
 }
 
 h2{
@@ -22,4 +24,5 @@ h2{
 	padding-bottom: 40px;
 	margin: 0px;
 	font-family: 'Audiowide', cursive;
+	text-shadow: 3px 2px #777;
 }

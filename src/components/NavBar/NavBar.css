@@ -7,16 +7,19 @@
   .itemLeft {
     width: 15%;
     color: black;
+    text-shadow: 3px 2px #777;
   }
   
   .itemCenter {
       width: 70%;
       color: black;
+      text-shadow: 3px 2px #777;
   }
   
   .itemRight {
     width: 15%;
     color: black;
+    text-shadow: 3px 2px #777;
   }
   
   .navbar {
