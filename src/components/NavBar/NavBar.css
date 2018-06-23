@@ -1,6 +1,7 @@
 .navbar li {
     display: inline-block;
     text-align: center;
+    font-size: 24px;
   }
   
   .itemLeft {
@@ -22,9 +23,11 @@
   
   li {
     color: white;
-    padding: 15px 0;
+    padding: 0px;
   }
   
-  body {
-    font-size: 24px;
+  ul {
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
