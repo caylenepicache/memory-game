@@ -11,48 +11,48 @@ import "./App.css";
 class App extends Component {
   state = {
     moonimages,
-    clickedFish: [],
+    clickedImage: [],
     score: 0
   };
 
-//when you click on a card ... the fish is taken out of the array
+//every click removes images from array
   imageClick = event => {
-    const currentFish = event.target.alt;
-    const FishAlreadyClicked =
-      this.state.clickedFish.indexOf(currentFish) > -1;
+    const currentImage = event.target.alt;
+    const thisImageClicked =
+      this.state.clickedImage.indexOf(currentImage) > -1;
 
-//if you click on a fish that has already been selected, the game is reset and cards reordered
-    if (FishAlreadyClicked) {
+//click the same, resets game
+    if (thisImageClicked) {
       this.setState({
-        fish: this.state.moonimages.sort(function(a, b) {
+        moonimages: this.state.moonimages.sort(function(a, b) {
           return 0.5 - Math.random();
         }),
-        clickedFish: [],
+        clickedImage: [],
         score: 0
       });
-        alert("You lose. Play again?");
+        alert("Play again?");
 
-//if you click on an available fish, your score is increased and cards reordered
+//else will increment score
     } else {
       this.setState(
         {
           moonimages: this.state.moonimages.sort(function(a, b) {
             return 0.5 - Math.random();
           }),
-          clickedFish: this.state.clickedFish.concat(
-            currentFish
+          clickedImage: this.state.clickedImage.concat(
+            currentImage
           ),
           score: this.state.score + 1
         },
-//if you get all 12 fish corrent you get a congrats message and the game resets        
+//all the images clicked, winner        
         () => {
           if (this.state.score === 12) {
-            alert("Yay! You Win!");
+            alert("Winner!");
             this.setState({
               moonimages: this.state.moonimages.sort(function(a, b) {
                 return 0.5 - Math.random();
               }),
-              clickedFish: [],
+              clickedImage: [],
               score: 0
             });
           }
@@ -70,6 +70,7 @@ class App extends Component {
         />
         <Jumbotron />
         <div className="wrapper">
+        {/*gets all the images from the json file */}
           {this.state.moonimages.map(moonimages => (
             <ImageCard
               imageClick={this.imageClick}
