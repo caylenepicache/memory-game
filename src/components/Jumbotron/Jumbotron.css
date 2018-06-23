@@ -1,19 +1,25 @@
 .header{
-	background-color: #ccc;
+	background: deepskyblue; /* For browsers that do not support gradients */
+    background: linear-gradient(to top, deepskyblue, #ff6699);
 	position: relative;
 	width: 100%;
+
 }
 
 h1{
 	text-align: center;
-	font-size: 90px;
+	font-size: 80px;
 	font-weight: bold;
 	padding: 90px 0 20px 0; 
 	margin: 0px;
+	font-family: 'Old Standard TT', serif;
+	background-color: transparent;
 }
 
 h2{
 	text-align: center;
-	font-size: 25px;
+	font-size: 30px;
 	padding-bottom: 40px;
+	margin: 0px;
+	font-family: 'Audiowide', cursive;
 }

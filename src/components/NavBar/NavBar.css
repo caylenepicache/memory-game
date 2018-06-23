@@ -1,24 +1,28 @@
 .navbar li {
     display: inline-block;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
   }
   
   .itemLeft {
     width: 15%;
+    color: black;
   }
   
   .itemCenter {
       width: 70%;
+      color: black;
   }
   
   .itemRight {
     width: 15%;
+    color: black;
   }
   
   .navbar {
-    background: #490549;
+    background: linear-gradient(to bottom, deepskyblue, #ff6699);
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    font-family: 'Old Standard TT', serif;
   }
   
   li {
@@ -30,4 +34,5 @@
     margin: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
+    
   }

@@ -5,6 +5,15 @@
   padding: 0px 100px 0px;
   justify-content: space-around;
   align-content: flex-start;
+  background-image: url('../src/images/vaporwave-grid-background-8.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  margin: 0px;
+
+  
+
 }
 
 img {
