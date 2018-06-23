@@ -12,7 +12,8 @@ class App extends Component {
   state = {
     moonimages,
     clickedImage: [],
-    score: 0
+    score: 0,
+    topScore: 0
   };
 
 //every click removes images from array
@@ -24,6 +25,7 @@ class App extends Component {
 //click the same, resets game
     if (thisImageClicked) {
       this.setState({
+        //randomize images
         moonimages: this.state.moonimages.sort(function(a, b) {
           return 0.5 - Math.random();
         }),
@@ -36,6 +38,7 @@ class App extends Component {
     } else {
       this.setState(
         {
+          //randomize images
           moonimages: this.state.moonimages.sort(function(a, b) {
             return 0.5 - Math.random();
           }),
@@ -46,6 +49,14 @@ class App extends Component {
         },
 //all the images clicked, winner        
         () => {
+          if (this.state.score >= this.state.topScore) {
+            this.setState({
+              moonimages: this.state.moonimages.sort(function(a, b) {
+                return 0.5 - Math.random();
+              }),
+              topScore: this.state.score
+            })
+          }
           if (this.state.score === 12) {
             alert("Winner!");
             this.setState({
@@ -66,6 +77,7 @@ class App extends Component {
     return (
       <div>
         <NavBar 
+          topScore={this.state.topScore}
           score={this.state.score}
         />
         <Jumbotron />
