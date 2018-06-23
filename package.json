@@ -2,7 +2,11 @@
   "name": "memory-game",
   "version": "0.1.0",
   "private": true,
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -b master -d build",
+  "homepage": "https://caylenepicache.github.io/memory-game/",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
